@@ -138,18 +138,23 @@ export default function Bundles() {
       </KineticSection>
 
       {/* Scrolling Banner */}
-      <div className="bg-black text-white py-4 border-y-2 border-primary overflow-hidden">
-        <div className="flex whitespace-nowrap animate-marquee hover:pause">
-          {[...Array(20)].map((_, i) => (
-            <div key={i} className="flex items-center gap-4 px-4">
-              <span className="text-2xl font-bold">⚡ SPEED</span>
-              <span className="text-gray-500">///</span>
-              <span className="text-2xl font-bold">SIMPLICITY</span>
-              <span className="text-gray-500">///</span>
-              <span className="text-2xl font-bold">RESULTS</span>
-              <span className="text-gray-500">///</span>
-            </div>
-          ))}
+      <div className="bg-black text-white py-4 border-y-2 border-primary overflow-hidden whitespace-nowrap relative group">
+        <div className="flex animate-marquee group-hover:[animation-play-state:paused]">
+          <div className="flex shrink-0">
+            {[...Array(20)].map((_, i) => (
+              <span key={i} className="mx-8 font-mono font-bold uppercase tracking-widest flex items-center gap-4 text-xl">
+                <span className="text-primary">⚡</span> SPEED <span className="text-gray-500">///</span> SIMPLICITY <span className="text-gray-500">///</span> RESULTS
+              </span>
+            ))}
+          </div>
+          {/* Duplicate for seamless loop */}
+          <div className="flex shrink-0" aria-hidden="true">
+            {[...Array(20)].map((_, i) => (
+              <span key={i} className="mx-8 font-mono font-bold uppercase tracking-widest flex items-center gap-4 text-xl">
+                <span className="text-primary">⚡</span> SPEED <span className="text-gray-500">///</span> SIMPLICITY <span className="text-gray-500">///</span> RESULTS
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
