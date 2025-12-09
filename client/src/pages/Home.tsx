@@ -111,7 +111,9 @@ export default function Home() {
               <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Instant Download</li>
               <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> No Setup Required</li>
             </ul>
-            <KineticButton variant="outline" className="w-full">Get Templates</KineticButton>
+            <Link href="/products/templates">
+              <KineticButton variant="outline" className="w-full">Get Templates</KineticButton>
+            </Link>
           </KineticCard>
 
           <KineticCard className="group bg-black text-white border-black shadow-[4px_4px_0px_0px_rgba(255,122,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,122,0,1)]">
@@ -137,7 +139,9 @@ export default function Home() {
               <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Industry Specific</li>
               <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Advanced Prompts</li>
             </ul>
-            <KineticButton variant="primary" className="w-full border-white">Get Toolkits</KineticButton>
+            <Link href="/products/toolkits">
+              <KineticButton variant="primary" className="w-full border-white">Get Toolkits</KineticButton>
+            </Link>
           </KineticCard>
 
           <KineticCard className="group">
@@ -163,7 +167,9 @@ export default function Home() {
               <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Full System Access</li>
               <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Video Training</li>
             </ul>
-            <KineticButton variant="outline" className="w-full">Get Bundles</KineticButton>
+            <Link href="/products/bundles">
+              <KineticButton variant="outline" className="w-full">Get Bundles</KineticButton>
+            </Link>
           </KineticCard>
         </KineticGrid>
       </KineticSection>

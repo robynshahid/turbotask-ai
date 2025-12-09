@@ -12,6 +12,9 @@ import Resources from "./pages/Resources";
 import ArticleDetail from "./pages/ArticleDetail";
 import Support from "./pages/Support";
 import HelpArticleDetail from "./pages/HelpArticleDetail";
+import Templates from "./pages/Templates";
+import Toolkits from "./pages/Toolkits";
+import Bundles from "./pages/Bundles";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -24,6 +27,9 @@ function Router() {
       <Route path={"/resources/:id"} component={ArticleDetail} />
       <Route path={"/support"} component={Support} />
       <Route path={"/support/article/:id"} component={HelpArticleDetail} />
+      <Route path={"/products/templates"} component={Templates} />
+      <Route path={"/products/toolkits"} component={Toolkits} />
+      <Route path={"/products/bundles"} component={Bundles} />
       <Route path={"/products/:category"} component={ProductDetail} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
