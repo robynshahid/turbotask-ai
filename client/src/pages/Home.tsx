@@ -60,20 +60,22 @@ export default function Home() {
 
       {/* Value Proposition - Marquee style */}
       <div className="bg-black text-white py-4 border-b-2 border-black overflow-hidden whitespace-nowrap relative group">
-        <div className="inline-flex animate-marquee group-hover:[animation-play-state:paused]">
-          {[...Array(20)].map((_, i) => (
-            <span key={i} className="mx-8 font-mono font-bold uppercase tracking-widest flex items-center gap-4 text-xl">
-              <Zap className="w-5 h-5 text-primary" /> Speed <span className="text-gray-500">///</span> Simplicity <span className="text-gray-500">///</span> Results
-            </span>
-          ))}
-        </div>
-        {/* Duplicate for seamless loop */}
-        <div className="inline-flex animate-marquee group-hover:[animation-play-state:paused]" aria-hidden="true">
-          {[...Array(20)].map((_, i) => (
-            <span key={i} className="mx-8 font-mono font-bold uppercase tracking-widest flex items-center gap-4 text-xl">
-              <Zap className="w-5 h-5 text-primary" /> Speed <span className="text-gray-500">///</span> Simplicity <span className="text-gray-500">///</span> Results
-            </span>
-          ))}
+        <div className="flex animate-marquee group-hover:[animation-play-state:paused]">
+          <div className="flex shrink-0">
+            {[...Array(20)].map((_, i) => (
+              <span key={i} className="mx-8 font-mono font-bold uppercase tracking-widest flex items-center gap-4 text-xl">
+                <Zap className="w-5 h-5 text-primary" /> Speed <span className="text-gray-500">///</span> Simplicity <span className="text-gray-500">///</span> Results
+              </span>
+            ))}
+          </div>
+          {/* Duplicate for seamless loop */}
+          <div className="flex shrink-0" aria-hidden="true">
+            {[...Array(20)].map((_, i) => (
+              <span key={i} className="mx-8 font-mono font-bold uppercase tracking-widest flex items-center gap-4 text-xl">
+                <Zap className="w-5 h-5 text-primary" /> Speed <span className="text-gray-500">///</span> Simplicity <span className="text-gray-500">///</span> Results
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
