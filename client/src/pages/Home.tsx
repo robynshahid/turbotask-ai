@@ -174,7 +174,7 @@ export default function Home() {
           <div className="order-2 lg:order-1 relative">
              <div className="absolute -inset-4 bg-primary/20 border-2 border-black z-0 transform rotate-2"></div>
              <div className="relative z-10 border-2 border-black bg-white p-2">
-                <img src="/images/about-mission-clean.png" alt="Our Mission" className="w-full h-auto grayscale" />
+                <img src="/images/footer-image.png" alt="Our Mission" className="w-full h-auto" />
              </div>
           </div>
           <div className="order-1 lg:order-2 space-y-8">
