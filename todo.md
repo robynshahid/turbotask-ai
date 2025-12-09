@@ -1,0 +1,4 @@
+- [x] AI Support Agent - answers any question using built-in LLM
+- [x] Related articles shown with AI responses
+- [x] Enter key triggers AI search
+- [ ] Make hero image static orange (remove hover effect)
