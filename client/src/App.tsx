@@ -15,6 +15,7 @@ import HelpArticleDetail from "./pages/HelpArticleDetail";
 import Templates from "./pages/Templates";
 import Toolkits from "./pages/Toolkits";
 import Bundles from "./pages/Bundles";
+import Automation from "./pages/Automation";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -30,6 +31,7 @@ function Router() {
       <Route path={"/products/templates"} component={Templates} />
       <Route path={"/products/toolkits"} component={Toolkits} />
       <Route path={"/products/bundles"} component={Bundles} />
+      <Route path={"/products/automation"} component={Automation} />
       <Route path={"/products/:category"} component={ProductDetail} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

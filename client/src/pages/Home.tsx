@@ -171,6 +171,33 @@ export default function Home() {
               <KineticButton variant="outline" className="w-full">Get Bundles</KineticButton>
             </Link>
           </KineticCard>
+
+          <KineticCard className="group bg-primary text-black border-primary shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+            <div className="mb-6 overflow-hidden border-2 border-black h-48 bg-black relative">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-6xl mb-2">🤖</div>
+                  <div className="font-mono font-bold text-white text-sm">CUSTOM BUILT</div>
+                </div>
+              </div>
+              <div className="absolute top-2 right-2 bg-black text-primary text-xs font-mono px-2 py-1 font-bold">
+                NEW
+              </div>
+            </div>
+            <h3 className="font-display font-bold text-2xl uppercase mb-2 text-black">
+              AI Automation Service
+            </h3>
+            <p className="text-gray-900 mb-6">
+              Done-for-you custom AI workflows, agents, and automated systems built specifically for your business.
+            </p>
+            <ul className="space-y-2 mb-6 font-mono text-sm text-gray-900">
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-black" /> Custom Built</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-black" /> Monthly Retainers</li>
+            </ul>
+            <Link href="/products/automation">
+              <KineticButton variant="outline" className="w-full border-black text-black hover:bg-black hover:text-primary">Get Started</KineticButton>
+            </Link>
+          </KineticCard>
         </KineticGrid>
       </KineticSection>
 
