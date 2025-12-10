@@ -1,8 +1,17 @@
+import { Link } from "wouter";
 import { Layout } from "@/components/Layout";
 import { KineticButton, KineticSection } from "@/components/ui/kinetic-card";
 import { Layers, Video, Rocket, CheckCircle2, ArrowRight, Crown, Zap } from "lucide-react";
 
 export default function Bundles() {
+  return (
+    <Layout>
+      <BundlesContent />
+    </Layout>
+  );
+}
+
+function BundlesContent() {
   const bundles = [
     {
       name: "Startup Accelerator Bundle",

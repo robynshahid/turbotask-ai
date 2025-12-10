@@ -1,8 +1,17 @@
 import { KineticSection, KineticCard, KineticButton, KineticGrid } from "@/components/ui/kinetic-card";
+import { Layout } from "@/components/Layout";
 import { Check, Zap, Bot, Workflow, Clock, DollarSign, Target, Sparkles } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Automation() {
+  return (
+    <Layout>
+      <AutomationContent />
+    </Layout>
+  );
+}
+
+function AutomationContent() {
   const services = [
     {
       name: "AI Customer Service Agents",

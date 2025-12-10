@@ -1,8 +1,17 @@
+import { Link } from "wouter";
 import { Layout } from "@/components/Layout";
 import { KineticButton, KineticSection } from "@/components/ui/kinetic-card";
 import { Download, Zap, Clock, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function Templates() {
+  return (
+    <Layout>
+      <TemplatesContent />
+    </Layout>
+  );
+}
+
+function TemplatesContent() {
   const templates = [
     {
       name: "Daily AI Planner",

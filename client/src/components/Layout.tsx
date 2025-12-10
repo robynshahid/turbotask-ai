@@ -1,35 +1,94 @@
 import { KineticButton } from "@/components/ui/kinetic-card";
-import { Zap } from "lucide-react";
+import { Zap, Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import { useState } from "react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background font-body selection:bg-primary selection:text-white flex flex-col">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black" role="navigation" aria-label="Main navigation">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <div className="w-8 h-8 bg-black flex items-center justify-center">
+            <div className="flex items-center gap-2 cursor-pointer" aria-label="TurboTask AI Home">
+              <div className="w-8 h-8 bg-black flex items-center justify-center" aria-hidden="true">
                 <Zap className="w-5 h-5 text-primary fill-current" />
               </div>
               <span className="font-display font-bold text-xl tracking-tighter uppercase">TurboTask AI</span>
             </div>
           </Link>
+          
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8 font-mono text-sm font-bold uppercase tracking-wide">
-            <a href="/#products" className="hover:text-primary transition-colors cursor-pointer">Products</a>
-            <Link href="/resources" className={`hover:text-primary transition-colors ${location === '/resources' ? 'text-primary' : ''}`}>Resources</Link>
-            <Link href="/about" className={`hover:text-primary transition-colors ${location === '/about' ? 'text-primary' : ''}`}>About</Link>
-            <Link href="/support" className={`hover:text-primary transition-colors ${location === '/support' ? 'text-primary' : ''}`}>Contact</Link>
+            <a href="/#products" className="hover:text-primary transition-colors cursor-pointer" aria-label="View Products">Products</a>
+            <Link href="/resources" className={`hover:text-primary transition-colors ${location === '/resources' ? 'text-primary' : ''}`} aria-label="Resources">Resources</Link>
+            <Link href="/about" className={`hover:text-primary transition-colors ${location === '/about' ? 'text-primary' : ''}`} aria-label="About Us">About</Link>
+            <Link href="/support" className={`hover:text-primary transition-colors ${location === '/support' ? 'text-primary' : ''}`} aria-label="Contact Support">Contact</Link>
           </div>
-          <Link href="/support">
-            <KineticButton variant="primary" className="hidden md:inline-flex py-2 px-4 text-xs">
-              Get Started
-            </KineticButton>
-          </Link>
+          
+          <div className="flex items-center gap-4">
+            <Link href="/support">
+              <KineticButton variant="primary" className="hidden md:inline-flex py-2 px-4 text-xs" aria-label="Get Started with TurboTask AI">
+                Get Started
+              </KineticButton>
+            </Link>
+            
+            {/* Mobile Menu Button */}
+            <button 
+              className="md:hidden p-2 hover:bg-gray-100 transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
+        
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t-2 border-black" role="menu">
+            <div className="container mx-auto px-4 py-6 space-y-4">
+              <a 
+                href="/#products" 
+                className="block font-mono text-sm font-bold uppercase tracking-wide hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+                role="menuitem"
+              >
+                Products
+              </a>
+              <Link 
+                href="/resources" 
+                className={`block font-mono text-sm font-bold uppercase tracking-wide hover:text-primary transition-colors py-2 ${location === '/resources' ? 'text-primary' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Resources
+              </Link>
+              <Link 
+                href="/about" 
+                className={`block font-mono text-sm font-bold uppercase tracking-wide hover:text-primary transition-colors py-2 ${location === '/about' ? 'text-primary' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link 
+                href="/support" 
+                className={`block font-mono text-sm font-bold uppercase tracking-wide hover:text-primary transition-colors py-2 ${location === '/support' ? 'text-primary' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <Link href="/support" onClick={() => setMobileMenuOpen(false)}>
+                <KineticButton variant="primary" className="w-full py-3 text-sm">
+                  Get Started
+                </KineticButton>
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Main Content */}
