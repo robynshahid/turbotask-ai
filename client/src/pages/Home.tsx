@@ -19,25 +19,27 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="inline-block bg-black text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest">
-                AI-Powered Productivity
+                AI Operating Systems
               </div>
               <h1 className="font-display font-extrabold text-5xl md:text-7xl leading-[0.9] tracking-tighter uppercase">
-                Work Faster.<br/>
-                <span className="text-primary">Smarter.</span><br/>
-                Instantly.
+                Complete <span className="text-primary">AI Systems.</span><br/>
+                Not Just<br/>
+                Templates.
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 max-w-lg font-medium leading-relaxed">
-                Replace manual tasks with AI-enabled workflows. Templates, toolkits, and systems for professionals who value speed.
+                End-to-end AI Operating Systems that manage entire business functions. From $47 starter kits to enterprise solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/products/toolkits">
+                <Link href="/#products">
                   <KineticButton variant="primary" className="text-lg px-8 py-4">
-                    Explore Toolkits <ArrowRight className="ml-2 w-5 h-5" />
+                    View Product Ladder <ArrowRight className="ml-2 w-5 h-5" />
                   </KineticButton>
                 </Link>
-                <KineticButton variant="outline" className="text-lg px-8 py-4">
-                  View Demo
-                </KineticButton>
+                <Link href="/membership">
+                  <KineticButton variant="outline" className="text-lg px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-black">
+                    Try Pro Membership
+                  </KineticButton>
+                </Link>
               </div>
             </div>
             <div className="relative">
@@ -84,10 +86,10 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
             <h2 className="font-display font-bold text-4xl md:text-5xl uppercase tracking-tighter mb-4">
-              Our <span className="text-primary">Arsenal</span>
+              Product <span className="text-primary">Value Ladder</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-xl">
-              Plug-and-play digital tools designed to automate repetitive tasks and optimize your workflow immediately.
+              From free starter resources to enterprise solutions. Choose your level and upgrade as you grow.
             </p>
           </div>
           <KineticButton variant="outline">View All Products</KineticButton>
@@ -98,18 +100,19 @@ export default function Home() {
             <div className="mb-6 overflow-hidden border-2 border-black h-48 bg-gray-100 relative">
               <img src="/images/feature-templates-clean.png" alt="AI Templates" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute top-2 right-2 bg-black text-white text-xs font-mono px-2 py-1 font-bold">
-                $19 - $47
+                $47 - $97
               </div>
             </div>
+            <div className="mb-2 text-xs font-mono font-bold text-gray-500 uppercase">Tier 2: Starter Kits</div>
             <h3 className="font-display font-bold text-2xl uppercase mb-2 group-hover:text-primary transition-colors">
-              AI Productivity Templates
+              AI Agent Templates
             </h3>
             <p className="text-gray-600 mb-6">
-              Daily planners, task organizers, email templates, and content generators ready to deploy.
+              Individual AI agents for email triage, content creation, meeting notes, and more. Ready to deploy.
             </p>
             <ul className="space-y-2 mb-6 font-mono text-sm text-gray-500">
               <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Instant Download</li>
-              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> No Setup Required</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> No-Code Setup</li>
             </ul>
             <Link href="/products/templates">
               <KineticButton variant="outline" className="w-full">Get Templates</KineticButton>
@@ -126,18 +129,19 @@ export default function Home() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               />
               <div className="absolute top-2 right-2 bg-primary text-white text-xs font-mono px-2 py-1 font-bold">
-                POPULAR
+                $149 - $249
               </div>
             </div>
+            <div className="mb-2 text-xs font-mono font-bold text-gray-400 uppercase">Tier 3: Professional Systems</div>
             <h3 className="font-display font-bold text-2xl uppercase mb-2 text-primary">
-              Professional Toolkits
+              Industry-Specific Toolkits
             </h3>
             <p className="text-gray-300 mb-6">
-              Communication systems, workflow organizers, and research kits for serious professionals.
+              Complete AI systems for marketing agencies, consultants, and creative professionals.
             </p>
             <ul className="space-y-2 mb-6 font-mono text-sm text-gray-400">
               <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Industry Specific</li>
-              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Advanced Prompts</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Multiple Agents</li>
             </ul>
             <Link href="/products/toolkits">
               <KineticButton variant="primary" className="w-full border-white">Get Toolkits</KineticButton>
@@ -154,21 +158,58 @@ export default function Home() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               />
               <div className="absolute top-2 right-2 bg-black text-white text-xs font-mono px-2 py-1 font-bold">
-                $97 - $297
+                $397 - $597
               </div>
             </div>
+            <div className="mb-2 text-xs font-mono font-bold text-gray-500 uppercase">Tier 4: Complete OS</div>
             <h3 className="font-display font-bold text-2xl uppercase mb-2 group-hover:text-primary transition-colors">
-              Workflow Bundles
+              AI Operating Systems
             </h3>
             <p className="text-gray-600 mb-6">
-              End-to-end AI powered workflow systems. The complete operating system for your business.
+              Full business AI Operating Systems. Manage entire functions from client onboarding to content marketing.
             </p>
             <ul className="space-y-2 mb-6 font-mono text-sm text-gray-500">
-              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Full System Access</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Complete Integration</li>
               <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Video Training</li>
             </ul>
             <Link href="/products/bundles">
               <KineticButton variant="outline" className="w-full">Get Bundles</KineticButton>
+            </Link>
+          </KineticCard>
+
+          <KineticCard className="group bg-gradient-to-br from-black to-gray-900 text-white border-black shadow-[6px_6px_0px_0px_rgba(255,122,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,122,0,1)]">
+            <div className="mb-6 overflow-hidden border-2 border-primary h-48 bg-gradient-to-br from-primary to-orange-600 relative">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-6xl mb-2">⚡</div>
+                  <div className="font-mono font-bold text-black text-sm">ALL-ACCESS</div>
+                </div>
+              </div>
+              <div className="absolute top-2 right-2 bg-black text-primary text-xs font-mono px-2 py-1 font-bold">
+                BEST VALUE
+              </div>
+            </div>
+            <div className="mb-2 text-xs font-mono font-bold text-primary uppercase">Tier 5: Pro Membership</div>
+            <h3 className="font-display font-bold text-2xl uppercase mb-2 text-primary">
+              TurboTask Pro
+            </h3>
+            <p className="text-gray-300 mb-4">
+              All-access subscription + private community. Get every template, toolkit, and system. Plus exclusive updates.
+            </p>
+            <div className="mb-6 p-4 bg-primary/10 border-2 border-primary rounded">
+              <div className="flex items-baseline gap-2 mb-1">
+                <span className="text-3xl font-bold text-primary">$19</span>
+                <span className="text-gray-400 text-sm">/month</span>
+              </div>
+              <div className="text-xs text-gray-400">or $199/year (save $29)</div>
+            </div>
+            <ul className="space-y-2 mb-6 font-mono text-sm text-gray-400">
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> All Products Included</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Private Community</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" /> Monthly Updates</li>
+            </ul>
+            <Link href="/membership">
+              <KineticButton variant="primary" className="w-full border-primary bg-primary text-black hover:bg-white">Join Pro</KineticButton>
             </Link>
           </KineticCard>
 
@@ -181,18 +222,19 @@ export default function Home() {
                 </div>
               </div>
               <div className="absolute top-2 right-2 bg-black text-primary text-xs font-mono px-2 py-1 font-bold">
-                NEW
+                $1,497+
               </div>
             </div>
+            <div className="mb-2 text-xs font-mono font-bold text-black uppercase">Tier 6: Done-For-You</div>
             <h3 className="font-display font-bold text-2xl uppercase mb-2 text-black">
-              AI Automation Service
+              Custom Implementation
             </h3>
             <p className="text-gray-900 mb-6">
               Done-for-you custom AI workflows, agents, and automated systems built specifically for your business.
             </p>
             <ul className="space-y-2 mb-6 font-mono text-sm text-gray-900">
               <li className="flex items-center gap-2"><Check className="w-4 h-4 text-black" /> Custom Built</li>
-              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-black" /> Monthly Retainers</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-black" /> White Glove Service</li>
             </ul>
             <Link href="/products/automation">
               <KineticButton variant="outline" className="w-full border-black text-black hover:bg-black hover:text-primary">Get Started</KineticButton>
