@@ -22,9 +22,9 @@ export default function Home() {
                 AI Operating Systems
               </div>
               <h1 className="font-display font-extrabold text-5xl md:text-7xl leading-[0.9] tracking-tighter uppercase">
-                Complete <span className="text-primary">AI Systems.</span><br/>
-                Not Just<br/>
-                Templates.
+                Work <span className="text-primary">Faster.</span><br/>
+                Smarter.<br/>
+                Instantly.
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 max-w-lg font-medium leading-relaxed">
                 End-to-end AI Operating Systems that manage entire business functions. From $47 starter kits to enterprise solutions.
